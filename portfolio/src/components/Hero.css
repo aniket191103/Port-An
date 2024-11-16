@@ -1,0 +1,136 @@
+/* Resetting default margins and paddings */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', Arial, sans-serif; /* Fallback to system fonts */
+}
+
+/* Main container styling */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh; /* Ensure the section takes full viewport height */
+}
+
+/* Container for content */
+.hero-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Hero image */
+.hero-image {
+    width: 50%; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1.5s ease, opacity 1.5s ease; /* Smooth transition */
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+/* Hero text */
+.hero-text {
+    width: 50%; /* Adjust as needed */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: transform 1.5s ease, opacity 1.5s ease; /* Smooth transition */
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* Heading styling */
+.hero-text h1 {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Hero icons */
+.hero-icons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Icon container */
+.icon-container {
+    margin-right: 20px; /* Adjust spacing between icons */
+    position: relative;
+    /* width: 25px; */
+}
+.logo{
+    width: 45px;
+    height: auto;
+}
+/* Show tooltip on hover */
+.icon-container:hover::before {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -40px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Show tooltip on hover */
+.icon-container:hover::before {
+    opacity: 1;
+}
+
+/* Icon styling */
+.icon-container img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Task list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.hero-icon {
+    width: 555px; /* Adjust the width as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column; /* Stack elements vertically */
+    }
+    
+    .hero-image, .hero-text {
+        width: 100%; /* Make each container take full width */
+    }
+    
+    .hero-image, .hero-text {
+        transform: translateX(0); /* Reset transform for smaller screens */
+        opacity: 1; /* Ensure elements are visible */
+    }
+}

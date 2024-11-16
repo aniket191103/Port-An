@@ -1,0 +1,151 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+* {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Education container */
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 40px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    background-color: white; /* Ensure background is set */
+}
+
+/* Logo styling */
+.education-logo {
+    width: 50%; /* Take 50% of the container */
+    max-width: 585px; /* Limit the maximum width */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Content container */
+.education-content {
+    width: 50%; /* Take 50% of the container */
+    max-width: 585px; /* Limit the maximum width */
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+/* Heading styling */
+.education-heading {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* Sub-heading styling */
+.education-sub-heading {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+.education-para {
+    font-family: "Inconsolata", monospace;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+/* Degree section */
+.Degree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Degree heading */
+.Degree-Heading {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+/* DIT logo */
+.Dit-logo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #e6e6e6;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+/* DIT details */
+.Dit-Details {
+    display: flex;
+    align-items: center;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .education {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .education-logo,
+    .education-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .education-heading {
+        font-size: 2rem;
+    }
+
+    .education-sub-heading {
+        font-size: 1.5rem;
+    }
+
+    .education-para {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .education {
+        padding: 10px;
+    }
+
+    .education-logo,
+    .education-content {
+        width: 100%;
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .education-heading {
+        font-size: 1.8rem;
+    }
+
+    .education-sub-heading {
+        font-size: 1.3rem;
+    }
+
+    .education-para {
+        font-size: 1rem;
+    }
+}
